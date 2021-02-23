@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+	<div class="main-div">
+		<div class="nav-bar">
+			<h3 class="nav-bar__title">Docket</h3>
+			<button class="nav-bar__add" onclick="modalAction()"><img src="assets/img/plus.svg" alt=""></button>
+		</div>
+		<div class="todos-wrapper">
+			<input type="text" id="myInput" onkeyup="searchToDos()" placeholder="Search for names.." class="todos__search-field">
+			<h1 class="todos__main-title">Notes</h1>
+			<div id = "todos" class="todos-list">
+				<div class="todos__task">
+					<h3 class="todos__task-title">Lorem ipsum dolor sit amet.</h3>
+					<p class="todos__task-description">1Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora et assumenda in, laboriosam eum fuga enim sit, minima nihil voluptate.</p>
+					<div class="todos__footer">
+						<p class = "todos__date">23.02.2021</p>
+						<a class="todos__edit-btn" id = "221" onclick = "modalActionOnEdit()">
+						</a>
+						<a class="todos__close-btn" id = "123"
+						onClick = "closeToDo()"></a>
+					</div>
+
+				</div>			
+				<div class="todos__task">
+					<h3 class="todos__task-title">Lorem ipsum dolor sit amet.</h3>
+					<p class="todos__task-description">2Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora et assumenda in, laboriosam eum fuga enim sit, minima nihil voluptate.</p>
+					<div class="todos__footer">
+						<p class = "todos__date">23.02.2021</p>
+						<a class="todos__edit-btn" id = "222" onclick = "modalActionOnEdit()">
+						</a>
+						<a class="todos__close-btn" id = "122"
+						onclick = "closeToDo()"></a>
+					</div>
+				</div>			
+				<div class="todos__task">
+					<h3 class="todos__task-title">Lorem ipsum dolor sit amet.</h3>
+					<p class="todos__task-description">3Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora et assumenda in, laboriosam eum fuga enim sit, minima nihil voluptate.</p>
+					<div class="todos__footer">
+						<p class = "todos__date">2.02.2021</p>
+						<a class="todos__edit-btn" id = "223" onclick = "modalActionOnEdit()"></a>
+						<a class="todos__close-btn" id = "121"
+						onclick = "closeToDo()"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<div class="modal-header">
+		    	<h2 class="modal-title">Modal Header</h2>
+		    	<span class="modal-close">&times;</span>
+		  	</div>
+		  	<div class="modal-body">
+		  		<form action="">
+		  			<label for="fTitle" class = "modal__label-title">Title:</label><br>
+					<input type="text" id="titleInput" name="fname"><br>
+					<label for="fDesc">Description</label><br>
+					<textarea id="descInput" rows="4" cols="50"></textarea>		  		
+				</form>
+		  	</div>
+		  	<div class="modal-footer">
+		    	<button class="modal-addBtn" id = "addBtn" onclick="addToDo()">Add</button>
+		    	<button class="modal-editBtn" id = "editBtn" onclick="editToDo()">Edit</button>
+		  	</div>
+		</div>
+	</div>	
+<script src="assets/js/script.js"></script>	
+</body>
+</html>

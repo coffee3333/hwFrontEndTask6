@@ -1,0 +1,249 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: gray;
+}
+
+.main-div{
+	display: flex;
+	justify-content: flex-start;
+	background: linear-gradient(121.32deg, #FFFFFF 10.96%, #FFFFFF 72%, #FFFFFF 99.98%);
+	box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	border-radius: 15px;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+
+
+.nav-bar{
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 20px 0;
+	border-right: 1px #F8F8F8 solid;
+	padding: 30px 20px 200px 20px;
+
+}
+
+.nav-bar__title{
+	font-family: Quicksand;
+	font-style: normal;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.nav-bar__add{
+	width: 25px;
+	hyphens: 25px;
+	border: transparent;
+	background: white;
+}
+
+.todos-wrapper{
+	padding: 20px 20px 20px 20px;
+	width: 100%;
+}
+
+.todos__main-title{
+	font-family: Quicksand;
+	font-style: normal;
+	font-size: 50px;
+	font-weight: bold;
+	margin-bottom: 40px;
+}
+
+.todos__search-field {
+	width: 130px;
+	max-width: 600px;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+	border: 1px transparent solid;
+	padding: 10px 0 10px 30px;
+	margin-bottom: 20px;
+	background: url(../img/loupe.svg);
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-position: 5px 5px;
+
+}
+
+
+.todos__search-field:focus {
+	border: 1px #F8F8F8 solid;
+  	width: 100%;
+}
+
+.todos-list{
+	display: grid;
+	grid-template-columns:repeat(5, 1fr);
+	grid-row-gap: 20px;
+	grid-column-gap: 20px;
+	width: 100%;
+}
+
+
+.todos__task{
+	background: linear-gradient(121.32deg, #FFFFFF 10.96%, #FFFFFF 72%, #FFFFFF 99.98%);
+	box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	border-radius: 20px;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+
+}
+
+.todos__footer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px 10px 20px;
+}
+
+
+.todos__date{
+
+}
+
+.todos__task-title{
+	padding: 20px 20px 5px 20px;
+}
+
+
+.todos__task-description{
+	padding: 10px 20px 30px 20px;
+}
+
+
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  margin-top: 82px;
+  padding: 0;
+  border: 1px solid #888;
+  width: 30%;
+  max-width: 1400px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  font-family: Quicksand;
+  font-style: normal;
+}
+
+.modal-header {
+  padding: 20px 16px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 5px #F8F8F8 solid;
+
+}
+
+.modal-title{
+	font-size: 15px;
+	font-weight: bold;
+	color: black;
+}
+
+.modal-body {
+	padding: 10px 16px;
+	border-bottom: 5px #F8F8F8 solid;
+}
+
+.modal-footer {
+  padding: 10px 16px;
+  color: white;
+}
+
+.modal-close {
+  color: black;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-addBtn{
+	display: none;
+	padding: 8px 15px;
+	background: white;
+	border-radius: 5px;
+}
+
+.modal-editBtn{
+	display: none;
+	padding: 8px 15px;
+	background: white;
+	border-radius: 5px;
+}
+
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+
+.todos__edit-btn{
+	background: url(../img/pen.png);
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-position: center;
+	width: 20px;
+	height: 20px;
+	padding: 10px;
+	border-radius: 50%;
+	border: 1px solid black;
+}
+
+
+.todos__close-btn{
+	background: url(../img/close.svg);
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-position: center;
+	width: 20px;
+	height: 20px;
+	padding: 10px;
+	border-radius: 50%;
+	border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
