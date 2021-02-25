@@ -1,7 +1,7 @@
 var divToEdit;
 
 function addToDo(){
-	closeModal();
+	if (!document.getElementById("titleInput").value.trim().length) return alert('Input title');
 
 	var todosDiv = document.getElementById("todos");
 
@@ -44,12 +44,13 @@ function addToDo(){
 	div.appendChild(buttonsWrapper);
 	todosDiv.appendChild(div);
 
+	closeModal();
 	clearModal();
 }
 
 
 function editToDo() {
-	closeModal();
+	if (!document.getElementById("titleInput").value.trim().length) return alert('Input title');
 
 	divToEdit.innerHTML = '';
 
@@ -85,7 +86,8 @@ function editToDo() {
 	divToEdit.appendChild(title);
 	divToEdit.appendChild(desc);
 	divToEdit.appendChild(buttonsWrapper);
-
+	
+	closeModal();
 	clearModal();
 }
 

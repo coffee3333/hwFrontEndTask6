@@ -48,7 +48,8 @@ body{
 
 .todos-wrapper{
 	padding: 20px 20px 20px 20px;
-	width: 100%;
+/*	width: 100%;
+*/	max-width: 1200px;
 }
 
 .todos__main-title{
@@ -96,6 +97,8 @@ body{
 	display: flex;
 	flex-flow: column;
 	justify-content: space-between;
+	overflow-x:hidden;
+    word-wrap:break-word;
 
 }
 
@@ -106,13 +109,11 @@ body{
 	padding: 0 20px 10px 20px;
 }
 
-
-.todos__date{
-
-}
-
 .todos__task-title{
 	padding: 20px 20px 5px 20px;
+	font-family: sans-serif;
+	font-style: normal;
+
 }
 
 

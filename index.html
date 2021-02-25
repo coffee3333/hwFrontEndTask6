@@ -15,7 +15,7 @@
 			<button class="nav-bar__add" onclick="modalAction()"><img src="assets/img/plus.svg" alt=""></button>
 		</div>
 		<div class="todos-wrapper">
-			<input type="text" id="myInput" onkeyup="searchToDos()" placeholder="Search for names.." class="todos__search-field">
+			<input type="text" id="myInput" onkeyup="searchToDos()" placeholder="Search..." class="todos__search-field">
 			<h1 class="todos__main-title">Notes</h1>
 			<div id = "todos" class="todos-list">
 				<div class="todos__task">
@@ -60,15 +60,15 @@
 	<div id="myModal" class="modal">
 		<div class="modal-content">
 			<div class="modal-header">
-		    	<h2 class="modal-title">Modal Header</h2>
+		    	<h2 class="modal-title">Add/Edit note</h2>
 		    	<span class="modal-close">&times;</span>
 		  	</div>
 		  	<div class="modal-body">
 		  		<form action="">
 		  			<label for="fTitle" class = "modal__label-title">Title:</label><br>
-					<input type="text" id="titleInput" name="fname"><br>
+					<input required type="text" id="titleInput" name="fname"><br>
 					<label for="fDesc">Description</label><br>
-					<textarea id="descInput" rows="4" cols="50"></textarea>		  		
+					<textarea id="descInput" rows="4" cols="50"></textarea>
 				</form>
 		  	</div>
 		  	<div class="modal-footer">
